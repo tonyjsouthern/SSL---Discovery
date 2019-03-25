@@ -22,7 +22,11 @@ Results can be found in the Results.txt file located in the root project directo
 This application uses a .env file to store environment variables. Simply create a file named ".env" in the root directory and use the following format:
 
 DB_HOST=MSSQL server here
+
 DB_USERNAME=MSSQL username here
+
 DB_PASSWORD=MSSQL password here
+
 DB_DATABASE=database name here
+
 DB_QUERY=database query here
