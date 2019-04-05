@@ -30,3 +30,11 @@ DB_PASSWORD=MSSQL password here
 DB_DATABASE=database name here
 
 DB_QUERY=database query here
+
+
+### Formatting Results
+To format the output copy and paste the results.txt file into Excel and perform the following:
+1) On the data column select "Text to Columns"
+2) Click Next
+3) Check ONLY the comma box and click next
+4) Click Finish

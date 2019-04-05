@@ -1,5 +1,5 @@
 //var express         = require('express');
-const fs          = require("fs");
+var fs	          = require("fs");
 var sslChecker    = require('ssl-checker')
 var dns           = require('dns').promises;
 var Connection    = require('tedious').Connection;
@@ -16,17 +16,15 @@ var config = {
 };
 
 var query = process.env.DB_QUERY;
-
 var customerArray;
 
 async function getCustomerCnames() {
 	var connection = await new sql(config.database, config.userName, config.password, config);
-	connection = connection;
 	await connection.query(query).spread((results) => {
 		customerArray = results;
 		console.log("Total customers to check: " + results.length);
 	})
-}
+};
 
 async function init() {
 	await checkResults();
