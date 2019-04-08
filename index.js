@@ -1,20 +1,21 @@
 var fs 				 = require("fs");
 var sslChecker = require('ssl-checker')
-var dns				 = require('dns').promises;
+var dns				 = require('dns-then');
 var Connection = require('tedious').Connection;
 var sql				 = require('sequelize');
+var key        = require('./key.js')
 require('dotenv').config();
 
 var config = {
-    host: process.env.DB_HOST,
+    host: key.db_host,
     port: "1433",
     dialect: "mssql",
-    userName: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE
+    userName: key.db_username,
+    password: key.db_password,
+    database: key.db_database
 };
 
-var query = process.env.DB_QUERY;
+var query = key.db_query;
 var customerArray;
 
 init();
@@ -70,7 +71,7 @@ async function runDnsResolve(domain) {
             return false;
         }
     } catch (error) {
-        return false;
+      return false;
     }
 }
 

@@ -38,3 +38,6 @@ To format the output copy and paste the results.txt file into Excel and perform 
 2) Click Next
 3) Check ONLY the comma box and click next
 4) Click Finish
+
+### Repackaging into a new .EXE
+Simply CD into the root folder of the project and run ```pkg index.js```

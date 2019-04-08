@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dns-then": "^0.1.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "pkg": "^4.3.7",
